@@ -5,26 +5,54 @@ import Card from '../components/Card.astro';
 
 <Layout title="EcoView">
 	<main>
-		<div class="encabezado">
-			<div class="encabezado-izquierda">
-				<img src="/resources/logo.png" width="70rem">
-				ECOVIEW
-			</div>
-			<div class="encabezado-derecha">
-				<button class="mi-boton" onclick="window.location.href='forum.astro'">
-					<img src="/resources/foco.png" width="20rem"> F o r o
-				</button>
-			</div>	
+	  <div class="encabezado">
+		<div class="encabezado-izquierda">
+		  <img src="/resources/logo.png" width="70rem">
+		  ECOVIEW
 		</div>
-		
-		
+		<div class="encabezado-derecha">
+		  <button class="mi-boton" onclick="window.location.href='forum.astro'">
+			<img src="/resources/foco.png" width="20rem"> F o r o
+		  </button>
+		</div>
+	  </div>
+  
+	  <div class="centrado">
+		<img src="/resources/ind1.jpg" width="280rem" alt="Image">
+		<div class="texto-derecha">
+		  <p>Air quality around the zinc plant has become a serious concern for our community. It's disheartening to witness the negative impact it has on our health and environment. We deserve cleaner air, and it's high time for change. #CleanAirNow #CommunityConcerns</p>
+		</div>
+	  </div>
+  
+	  <div class="centrado">
+		<img src="/resources/ind1.jpg" width="280rem" alt="Image">
+		<div class="texto-derecha">
+		  <p>Air quality around the zinc plant has become a serious concern for our community. It's disheartening to witness the negative impact it has on our health and environment. We deserve cleaner air, and it's high time for change. #CleanAirNow #CommunityConcerns</p>
+		</div>
+	  </div>
+  
+	  <div class="centrado">
+		<img src="/resources/ind1.jpg" width="280rem" alt="Image">
+		<div class="texto-derecha">
+		  <p>Air quality around the zinc plant has become a serious concern for our community. It's disheartening to witness the negative impact it has on our health and environment. We deserve cleaner air, and it's high time for change. #CleanAirNow #CommunityConcerns</p>
+		</div>
+	  </div>
+  
+	  <!-- Sección para agregar al foro -->
+	  <div class="centrado">
+		<div class="agregar-al-foro">
+		  <h2>¡Únete a la conversación en nuestro foro!</h2>
+		  <button class="mi-boton" onclick="window.location.href='agregar-al-foro.astro'">
+			Publicar en el Foro
+		  </button>
+		</div>
+	  </div>
+	</main>
 	<footer class="pie-de-pagina">
-		Número de contacto
-		<h2>Contacto Secretaría de Ecología Y Gestión Ambiental
-		<br>44 41 51 06 09</h2>
+	  <!-- Pie de página aquí -->
 	</footer>
-	
-</Layout>
+  </Layout>
+  
 
 <style>
 	main {
@@ -36,6 +64,34 @@ import Card from '../components/Card.astro';
 		font-size: 20px;
 		line-height: 1.6;
 	}
+
+	/* Estilos para el contenedor centrado */
+.centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d572c; /* Fondo verde */
+  color: white; /* Color de texto blanco */
+  padding: 10px;
+  margin-top:3rem;
+  border-radius: 5px;
+  max-width: 600px; /* Ajusta el ancho máximo según tu preferencia */
+  margin: 0 auto; /* Centra horizontalmente el contenedor */
+}
+
+/* Estilos para la imagen a la izquierda */
+.imagen-izquierda {
+  width: 100px; /* Ancho de la imagen */
+  height: auto; /* Altura automática según el ancho */
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilos para el texto a la derecha */
+.texto-derecha {
+  flex: 1; /* Hace que el texto ocupe todo el espacio restante en la fila */
+}
+
+	
 	.astro-a {
 		position: absolute;
 		top: -32px;
