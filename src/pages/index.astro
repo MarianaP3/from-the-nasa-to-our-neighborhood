@@ -5,7 +5,12 @@ import Card from '../components/Card.astro';
 
 <Layout title="From the space to out neighborhood.">
 	<main>
-		<div class="encabezado"></div>
+		<div class="encabezado">
+			<img src="/resources/logo.png", width="75rem">
+			<button class="mi-boton">
+				<img src="/resources/foco.png", width="20rem"> F o r o
+			</button>
+		</div>
 		<div class="contenedor1">
 			<div class="contenedor-h1">
 				<h1>From the space to our neighborhood</h1>
@@ -34,11 +39,24 @@ import Card from '../components/Card.astro';
 			<div class="bullet"></div>
 			<div class="linea"></div>
 			<div class="bullet"></div>
-		  </div>
-				
+		</div>
+		<div class="contenedor-componente">
+			<div class="componente-izquierda"><img src="/resources/satellite1.jpg", width="280rem"></div>
+			<div class="componente-derecha">Contenido Derecho</div>
+		</div>		
+		<div class="contenedor-componente">
+			<div class="componente-izquierda"><img src="/resources/satellite1.jpg", width="280rem"></div>
+			<div class="componente-derecha">Contenido Derecho</div>
+		</div>			  
+		<div class="contenedor-componente">
+			<div class="componente-izquierda"><img src="/resources/satellite1.jpg", width="280rem"></div>
+			<div class="componente-derecha">Contenido Derecho</div>
+		</div>	
 		  
-
 	</main>
+	<footer class="pie-de-pagina">
+		Número de contacto
+	</footer>
 </Layout>
 
 <style>
@@ -133,7 +151,8 @@ import Card from '../components/Card.astro';
 		padding-left: 14rem;
 	}
 	.linea-tiempo {
-		padding-top: 3rem;
+		padding-top: 5rem;
+		padding-bottom: 3rem;
   		display: flex;
   		align-items: center;
   		justify-content: space-between;
@@ -148,6 +167,10 @@ import Card from '../components/Card.astro';
   		border-radius: 50%; /* Hace que el punto sea circular */
 	}
 
+	.bullet:hover {
+		transform: scale(1.2);
+	}
+
 	.linea {
   		flex-grow: 1; /* Expande la línea horizontal para llenar el espacio entre puntos (bullets) */
   		height: 9px; /* Altura de la línea horizontal */
@@ -155,35 +178,69 @@ import Card from '../components/Card.astro';
 	}
 
 
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+	.contenedor-componente {
+		padding-top: 3rem;
+  		display: flex;
+		width: 61rem;
+		padding-left: 7rem;
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
+
+	.componente-izquierda {
+ 		flex: 10rem; /* Ancho del 30% para el componente izquierdo */
+  		background-color:white; /* Color de fondo del componente izquierdo */
+  		padding: 1rem; /* Espacio interior para el componente izquierdo */
+  		color: white; /* Color del texto en el componente izquierdo */
+		height: 10rem;
 	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
+
+	.componente-derecha {
+  		flex: 50%; /* Ancho del 70% para el componente derecho */
+  		background-color: #d5f2dd; /* Color de fondo del componente derecho */
+  		padding: 1rem; /* Espacio interior para el componente derecho */
+		height: 10rem;
 	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+
+	body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Establece la altura mínima de la página al 100% de la ventana del navegador */
+  margin: 0; /* Elimina el margen predeterminado del cuerpo de la página */
+}
+
+.contenido {
+  flex: 1; /* Hace que el contenido ocupe todo el espacio disponible */
+}
+
+.pie-de-pagina {
+	margin-top: 2rem;
+	width: 85rem;
+	padding-left: 2rem;
+	padding-top: 1rem;
+	font-weight: bold;
+	position: static;
+	height: 135px;
+	color:#2d572c;
+	background-color: #e9e7e7; /* Color de fondo del pie de página */
+  	border-radius: 30px 30px 0px 0px; /* Redondear solo la parte superior */
+}
+.mi-boton {
+    background-color: #fff; /* Color de fondo del botón */
+    color: #2d572c; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 8px 20px 10px ; /* Relleno interno (arriba/abajo, izquierda/derecha) */
+    font-size: 16px; /* Tamaño de fuente */
+	font-weight:bold;
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+	margin-left: 72rem;
+	margin-top: 1rem;
+}
+
+/* Cambia el estilo del botón cuando se pasa el cursor por encima */
+.mi-boton:hover {
+    background-color: #2d572c; /* Cambia el color de fondo al pasar el cursor */
+	color:white;
+	transform: scale(1.2);
+}
+
 </style>
