@@ -3,60 +3,67 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="From the space to out neighborhood.">
+<Layout title="EcoView">
 	<main>
 		<div class="encabezado">
-			<img src="/resources/logo.png", width="75rem">
-			<button class="mi-boton">
-				<img src="/resources/foco.png", width="20rem"> F o r o
-			</button>
+			<div class="encabezado-izquierda">
+				<img src="/resources/logo.png" width="70rem">
+				ECOVIEW
+			</div>
+			<div class="encabezado-derecha">
+				<button class="mi-boton">
+					<img src="/resources/foco.png" width="20rem"> F o r o
+				</button>
+			</div>
 		</div>
+		
 		<div class="contenedor1">
 			<div class="contenedor-h1">
-				<h1>From the space to our neighborhood</h1>
-				<h2>Este es un texto descriptivo de la problemáticao unpequeño texto de introducción a la página solamente, aún está por decidirse</h2>
+				<h1>From the space to our <h1-2>neighborhood</h1-2></h1>
+				<h2>In the state of San Luis Potosí, various environmental problems have arisen due to the zinc plant located to the west of the city; These mainly affect the communities surrounding said building.</h2>
 			</div>
 			<div class="contenedor-h2">
-				<img src="/resources/satellite1.jpg", width="500rem">
+				<img src="/resources/planta-zinc.jpeg", width="500rem">
 			</div>
 			<div class="contenedor-h2">
 			</div>
+		</div>
+		<div class="contenedor-central">
+			<h3>MODIS, which stands for "Moderate Resolution Imaging Spectroradiometer," is a remote sensing instrument developed by NASA. It was launched in 1999 and is onboard the Terra and Aqua satellites. MODIS captures images of Earth at a moderate resolution, enabling comprehensive monitoring of climate, vegetation, and water quality, which is crucial for understanding and caring for our planet.</h3>
 		</div>
 		<div class="contenedor2">
 			<img src="/resources/satellite1.jpg", width="800rem">
 		</div>
 		<div class="linea-tiempo">
-			<div class="bullet"></div>
+			<div class="bullet">
+				<p style="color: black;">1982</p>
+			</div>
 			<div class="linea"></div>
-			<div class="bullet"></div>
+			<div class="bullet">
+				<p style="color: black;">2019</p>
+			</div>
 			<div class="linea"></div>
-			<div class="bullet"></div>
+			<div class="bullet">
+				<p style="color: black;">2021</p>
+			</div>
 			<div class="linea"></div>
-			<div class="bullet"></div>
-			<div class="linea"></div>
-			<div class="bullet"></div>
-			<div class="linea"></div>
-			<div class="bullet"></div>
-			<div class="linea"></div>
-			<div class="bullet"></div>
-		</div>
-		<div class="contenedor-componente">
-			<div class="componente-izquierda"><img src="/resources/satellite1.jpg", width="280rem"></div>
-			<div class="componente-derecha">Contenido Derecho</div>
+			<div class="bullet">
+				<p style="color: black;">2022</p>
+			</div>
 		</div>		
 		<div class="contenedor-componente">
 			<div class="componente-izquierda"><img src="/resources/satellite1.jpg", width="280rem"></div>
 			<div class="componente-derecha">Contenido Derecho</div>
-		</div>			  
-		<div class="contenedor-componente">
-			<div class="componente-izquierda"><img src="/resources/satellite1.jpg", width="280rem"></div>
-			<div class="componente-derecha">Contenido Derecho</div>
-		</div>	
+		</div>		
+		
 		  
 	</main>
 	<footer class="pie-de-pagina">
 		Número de contacto
+		<h2>Contacto Secretaría de Ecología Y Gestión Ambiental
+		<br>44 41 51 06 09</h2>
 	</footer>
+	
 </Layout>
 
 <style>
@@ -86,6 +93,14 @@ import Card from '../components/Card.astro';
 		margin-bottom: 0em;
 		color: black;
 	}
+	h1-2 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: left;
+		margin-bottom: 0em;
+		color:#2d572c;
+	}
 	h2 {
 		font-size: 1rem;
 		font-weight: 100;
@@ -95,17 +110,15 @@ import Card from '../components/Card.astro';
 		color: black;
 		padding: 1rem;
 	}
-	.encabezado{
-		background-color: #d5f2dd;
-		border-radius: 0px 0px 30px 30px; 
-  		padding: 10px;
-  		position: fixed; /* Elemento fijo */
-  		top: 0; /* Pegado a la parte superior de la página */
-  		left: 0; /* Pegado al borde izquierdo de la página */
-  		width: 100%; /* Ancho de página completo */
-		height: 5rem;
+	h3 {
+		font-size: 1.5rem;
+		font-weight: 100;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+		color: black;
+		padding: 1rem;
 	}
-
 	.contenedor1 {
   		display: flex; /* Activa el modelo Flexbox */
   		justify-content: space-between; /* Alinea los elementos al principio y al final del contenedor */
@@ -134,7 +147,7 @@ import Card from '../components/Card.astro';
 	.contenedor2 {
 		display: flex; /* Activa el modelo Flexbox */
   		justify-content: space-between; /* Alinea los elementos al principio y al final del contenedor */
-  		padding-top: 8rem;
+  		padding-top:1rem;
 		padding-left: 12rem;
 	}
 
@@ -223,24 +236,55 @@ import Card from '../components/Card.astro';
 	background-color: #e9e7e7; /* Color de fondo del pie de página */
   	border-radius: 30px 30px 0px 0px; /* Redondear solo la parte superior */
 }
-.mi-boton {
-    background-color: #fff; /* Color de fondo del botón */
-    color: #2d572c; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 8px 20px 10px ; /* Relleno interno (arriba/abajo, izquierda/derecha) */
-    font-size: 16px; /* Tamaño de fuente */
-	font-weight:bold;
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-	margin-left: 72rem;
-	margin-top: 1rem;
+
+.encabezado {
+  background-color: #d5f2dd;
+  border-radius: 0px 0px 30px 30px;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex; /* Convertir .encabezado en un contenedor flexible */
+  align-items: center; /* Alinear verticalmente el contenido */
+  justify-content: space-between; /* Distribuir el contenido en los extremos */
+  height: 5rem;
 }
 
-/* Cambia el estilo del botón cuando se pasa el cursor por encima */
+.encabezado-izquierda {
+  padding-left: 2rem;
+  color:#2d572c;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.encabezado-derecha {
+  padding-right: 3rem;
+}
+
+.mi-boton {
+  background-color: #fff;
+  color: #2d572c;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
 .mi-boton:hover {
-    background-color: #2d572c; /* Cambia el color de fondo al pasar el cursor */
-	color:white;
-	transform: scale(1.2);
+  background-color: #2d572c;
+  color: white;
+  transform: scale(1.2);
+}
+
+.contenedor-central{
+	margin-left: 5rem;
+	margin-right: 5rem;
+	margin-top: 5rem;
 }
 
 </style>
